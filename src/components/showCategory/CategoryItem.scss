@@ -1,0 +1,23 @@
+.category-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.categoryBox {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.categoryBox:hover{
+    border-top: 2px solid #ee2323;
+}
