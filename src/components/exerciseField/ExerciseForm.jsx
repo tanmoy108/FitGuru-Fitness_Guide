@@ -2,8 +2,10 @@ import {React,useState} from 'react'
 import { Stack,TextField} from "@mui/material"
 import "./ExerciseForm.scss"
 import ShowCategoryBody from '../showCategory/ShowCategoryBody';
+import { exerciseText } from '../../redux/excersiseText/excerciseTextAction';
+import { useDispatch } from "react-redux";
 const ExerciseForm = () => {
-
+    const dispatch = useDispatch()
     const [search,setSearch] = useState("");
 
     const HandleChange = (e) =>{
@@ -12,6 +14,7 @@ const ExerciseForm = () => {
 
     const HandleSubmit = () =>{
         console.log(search);
+        dispatch(exerciseText(search));
     }
 
     return (

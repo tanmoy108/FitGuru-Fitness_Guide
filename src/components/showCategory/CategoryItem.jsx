@@ -2,11 +2,11 @@ import React from 'react'
 import FitnessCenterRoundedIcon from '@mui/icons-material/FitnessCenterRounded';
 
 const CategoryItem = (props) => {
-    const {item} = props;
-    console.log(item);
+    const {item,HandleCategory} = props;
+    // console.log(item);
   return (
     <>
-    <div className="categoryBox">
+    <div className="categoryBox" onClick={()=>HandleCategory(item)} >
         <FitnessCenterRoundedIcon sx={{mb:2}} fontSize="large" style={{color:"#ee2323"}}/>
         {item}
     </div>
