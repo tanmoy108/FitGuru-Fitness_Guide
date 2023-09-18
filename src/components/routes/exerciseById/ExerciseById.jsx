@@ -18,6 +18,7 @@ const ExerciseById = () => {
             const getData = await response(url, exerciseOption);
             setSpecificObj(getData);
         }
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
         fetchSpecificData()
     }, [id])
 
@@ -61,7 +62,7 @@ const ExerciseById = () => {
                     </Stack>
                 </Stack>
             </Stack>
-            <ExcerciseByVideo name={specificObj.name} target={specificObj.target} />
+            <ExcerciseByVideo id={id} name={specificObj.name} target={specificObj.target} equipment={specificObj.equipment} />
         </Container>
     )
 }

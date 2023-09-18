@@ -3,7 +3,7 @@ import axios from "axios";
 export const exerciseOption = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '2bdec45b41mshd5e74bd72dd7b53p1aa718jsncaaf16804838',
+        'X-RapidAPI-Key': '2bdec45b41mshd5e74bd72dd7b53p1aa718jsncaaf168048380',
         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     }
 };

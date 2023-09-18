@@ -1,36 +1,9 @@
-import { EXERCISE_ACTION_TYPE } from "./exerciseApiActionType.js"
-import { response,exerciseOption } from "../../utils/utilsFetchData.js";
+import { EXERCISE_API_ACTION_TYPE } from "./exerciseApiActionType"
 
-// const ArrayFun = async(item,typeName) =>{
-//     const url = typeName==="all" ? process.env.REACT_APP_ALL : process.env.REACT_APP_ALL+"/"+typeName+"/"+item;
-//     const allData = await response(url, exerciseOption);
-//     return allData;
-// }
-
-export const exerciseAll = (item) => {
+export const exerciseArray = (item) => {
     return {
-        type: EXERCISE_ACTION_TYPE.ALL,
+        type: EXERCISE_API_ACTION_TYPE.TYPE_ARRAY,
         payload:item
     }
 }
 
-export const exerciseName = (item) => {
-    return {
-        type: EXERCISE_ACTION_TYPE.NAME,
-        payload:item
-    }
-}
-
-export const exerciseTarget = (item) => {
-    return {
-        type: EXERCISE_ACTION_TYPE.TARGET,
-        payload:item
-    }
-}
-
-export const exerciseEquipment = (item) => {
-    return {
-        type: EXERCISE_ACTION_TYPE.EQUIPMENT,
-        payload:item
-    }
-}

@@ -2,11 +2,12 @@ import React, { useEffect,useState } from 'react'
 import { response, youtubeOption } from '../../utils/utilsFetchData'
 import VideoCard from './VideoCard';
 import "./ExerciseByVideo.scss";
-import { useSelector } from 'react-redux';
+import ExerciseEquipment from '../similarExercise/ExerciseEquipment';
+import ExerciseTarget from '../similarExercise/ExerciseTarget';
 
 const ExcerciseByVideo = (props) => {
     const [video,setVideo] = useState([]);
-    const {name,target} = props
+    const {id,name,target,equipment} = props
 
     useEffect(()=>{
         const fetchVdieo = async() =>{
@@ -18,11 +19,15 @@ const ExcerciseByVideo = (props) => {
     },[name,target])
 
   return (
+   <>
     <div className='videoCardBody' style={{justifyContent: 'center'}} >
    {
     video ?  <VideoCard video={video}/> : <div>Loading</div>
    }
     </div>
+    <ExerciseEquipment equipment={equipment} id={id}/>
+    <ExerciseTarget target={target} id={id} />
+   </>
   )
 }
 

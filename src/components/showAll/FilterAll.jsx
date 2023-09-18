@@ -1,13 +1,13 @@
 import React from 'react'
 import AllItem from './AllItem'
 
-const FilterAll = ({allExercise}) => {
+const FilterAll = ({Arr,condition,id}) => {
   return (
     <div className='item-container'>
     {
-      allExercise.filter((items, ids) => {
+      Arr.filter((items, ids) => {
         return (
-          ids < 4
+          condition === "true" ? ids < 4 && items.id !== id : ids<4
         )
       }).map((item, id) => {
         return (

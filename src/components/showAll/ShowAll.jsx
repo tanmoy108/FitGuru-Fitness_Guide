@@ -1,23 +1,25 @@
-import { React, useState, useEffect } from 'react';
+import { React, useEffect } from 'react';
 import { response, exerciseOption } from '../../utils/utilsFetchData';
 import "./ShowAll.scss";
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch } from 'react-redux';
 import FilterAll from './FilterAll';
+import { exerciseArray } from "../../redux/excerciseApi/exerciseApiAction";
 
 const ShowAll = () => {
   const textExercise = useSelector((state) => state.exerciseTextObj);
-
-  const [allExercise, setAllExercise] = useState([]);
+  const dispatch = useDispatch();
   useEffect(() => {
     const fetchAll = async () => {
       const url = (textExercise!=="") ? process.env.REACT_APP_ALL+"/bodyPart/"+textExercise : process.env.REACT_APP_ALL;
       const allData = await response(url, exerciseOption);
-      setAllExercise(allData);
+      dispatch(exerciseArray(allData))
     }
     fetchAll()
-  }, [textExercise])
+  }, [textExercise,dispatch])
+
+  const Arr = useSelector((state) => state.exerciseApiObj);
   return (
-   <FilterAll allExercise={allExercise} />
+   <FilterAll Arr={Arr} />
   )
 }
 

@@ -13,6 +13,7 @@ const AllItem = (props) => {
         <div className='item-label' >
         <p className='item-bodypart' >{item.bodyPart}</p>
         <p className='item-target' >{item.target}</p>
+        <p className='item-equipment' >{item.equipment}</p>
         </div>
         <h4>{item && item.name.toUpperCase()}</h4>
     </div>
