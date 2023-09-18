@@ -10,9 +10,11 @@ const ShowAll = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     const fetchAll = async () => {
-      const url = (textExercise!=="") ? process.env.REACT_APP_ALL+"/bodyPart/"+textExercise : process.env.REACT_APP_ALL;
+      // const url = (textExercise!=="") ? process.env.REACT_APP_ALL+"/bodyPart/"+textExercise : process.env.REACT_APP_ALL;
+      const url = process.env.REACT_APP_ALL;
       const allData = await response(url, exerciseOption);
-      dispatch(exerciseArray(allData))
+      const newArray = allData.filter((item)=>(item.bodyPart.toLowerCase().includes(textExercise)||item.target.toLowerCase().includes(textExercise)||item.equipment.toLowerCase().includes(textExercise)||item.name.toLowerCase().includes(textExercise)))
+      dispatch(exerciseArray(textExercise!=="" ? newArray : allData ))
     }
     fetchAll()
   }, [textExercise,dispatch])

@@ -5,10 +5,10 @@
     justify-content: center;
 }
 .item-box{
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     background-color: rgb(255, 255, 255);
-    margin: 10px;
+    // margin: 3px;
     padding: 40px 10px;
     border-radius: 10px;
     display: flex;
@@ -31,18 +31,33 @@
             background-color: rgb(124, 235, 124);
             padding: 3px 10px;
             border-radius: 25px;
+            text-align: center;
         }
         .item-bodypart{
             background-color: rgb(235, 196, 124);
             padding: 3px 10px;
             border-radius: 25px;
             margin-right: 5px;
+            text-align: center;
         }
         .item-equipment{
             background-color: rgb(124, 218, 235);
             padding: 3px 10px;
             border-radius: 25px;
             margin-left: 5px;
+            text-align: center;
         }
     }
+
 }
+
+@media only screen and (max-width: 756px) {
+    .item-box {
+        width: 250px;
+        height: 300px;
+        overflow: hidden;
+    }
+    h4,.item-bodypart,.item-label,.item-target{
+        font-size: 12px;
+    }
+  }

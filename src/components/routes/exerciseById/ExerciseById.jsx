@@ -43,14 +43,14 @@ const ExerciseById = () => {
                 <Stack sx={{ width: { xs: '200px', md: '600px' } }} className="imgBox" >
                     <img src={specificObj.gifUrl} alt='' />
                 </Stack>
-                <Stack sx={{ p: { xs: 1 } }}>
+                <Stack sx={{ p: { xs: 0 } }}>
                     <Typography variant="h4" className='specificName' >{specificObj.name}</Typography>
                     <Typography variant="body1" style={{ marginTop: "20px" }}>
                         {`This Exercise keeps you strong. ${specificObj.name} is one of the best
                         exercises to target your ${specificObj.target}. Basically it's related to your ${specificObj.bodyPart}. It will help you improve your
                         mood and gain energy.`}
                     </Typography>
-                    <Stack direction="row" sx={{ mt: 3 }}>
+                    <Stack direction={{sm:"row",xs:"column"}} sx={{ mt: 3 }}>
                         {extra.map((item, id) => {
                             return (
                                 <div className="extra-box" key={id}>

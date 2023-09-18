@@ -21,4 +21,24 @@
         margin-top: 20px;
         border: none;
     }
+    @media only screen and (max-width: 756px) {
+        h3{
+            font-size: 20px;
+            text-align: center;
+        }
+        .home-button{
+            width: 200px;
+            padding: 20px 10px;
+            border-radius: 40px;
+            font-size: large;
+            margin-top: 20px;
+           
+        }
+      }
 }
+
+@media only screen and (max-width: 756px) {
+    .home-box{
+        align-items: center;
+    }
+  }
