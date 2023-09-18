@@ -14,6 +14,7 @@ const ExerciseDetails = () => {
     const fetchAll = async () => {
       const url = process.env.REACT_APP_ALL;
       const allData = await response(url, exerciseOption);
+      console.log(exerciseOption)
       dispatch(exerciseArray(allData))
     }
     fetchAll()
