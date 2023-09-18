@@ -13,8 +13,7 @@ const ExerciseForm = () => {
     }
 
     const HandleSubmit = () =>{
-        console.log(search);
-        dispatch(exerciseText(search));
+        dispatch(exerciseText(search.toLowerCase()));
     }
 
     return (

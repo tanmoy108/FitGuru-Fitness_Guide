@@ -12,9 +12,7 @@ const ShowCategoryBody = () => {
     useEffect(() => {
         const fetchDataCategory = async () => {
             const url = "https://exercisedb.p.rapidapi.com/exercises/bodyPartList";
-            // console.log(url);
             const categoryData = await response(url, exerciseOption)
-            // console.log(categoryData);
             setCategory(categoryData)
         }
         fetchDataCategory()

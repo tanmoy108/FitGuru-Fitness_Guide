@@ -14,7 +14,7 @@ const AllItem = (props) => {
         <p className='item-bodypart' >{item.bodyPart}</p>
         <p className='item-target' >{item.target}</p>
         </div>
-        <h4>{item.name.toUpperCase()}</h4>
+        <h4>{item && item.name.toUpperCase()}</h4>
     </div>
   )
 }

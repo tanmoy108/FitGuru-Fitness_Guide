@@ -1,7 +1,7 @@
-import { React, useEffect, useState } from 'react'
+import { React, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { response, exerciseOption } from '../../../utils/utilsFetchData';
-import { Stack, Typography,Container } from '@mui/material';
+import { Stack, Typography, Container } from '@mui/material';
 import "./ExerciseById.scss";
 import bodypart from "../../../assets/body-part.png";
 import equipment from "../../../assets/equipment.png";
@@ -35,13 +35,12 @@ const ExerciseById = () => {
             name: specificObj.target
         }
     ]
-
     return (
         <Container maxWidth="lg">
             <LinkNav fontcolor="true" />
-            <Stack direction={{ md: "row", sm: "column" }} spacing={2} style={{ backgroundColor: "#fff", height: 'max-content', borderRadius:"8px" }} className="specificBox" sx={{ p: 3 }} >
+            <Stack direction={{ md: "row", sm: "column" }} spacing={2} style={{ backgroundColor: "#fff", height: 'max-content', borderRadius: "8px" }} className="specificBox" sx={{ p: 3 }} >
                 <Stack sx={{ width: { xs: '200px', md: '600px' } }} className="imgBox" >
-                    <img src={specificObj.gifUrl} />
+                    <img src={specificObj.gifUrl} alt='' />
                 </Stack>
                 <Stack sx={{ p: { xs: 1 } }}>
                     <Typography variant="h4" className='specificName' >{specificObj.name}</Typography>
@@ -54,7 +53,7 @@ const ExerciseById = () => {
                         {extra.map((item, id) => {
                             return (
                                 <div className="extra-box" key={id}>
-                                    <img src={item.icon} alt="" style={{ marginBottom: '5 px' }} />
+                                    <img src={item.icon} alt='' style={{ marginBottom: '5 px' }} />
                                     <Typography textAlign="center" variant="overline">{item.name}</Typography>
                                 </div>
                             )

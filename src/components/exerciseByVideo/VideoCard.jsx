@@ -13,7 +13,6 @@ const VideoCard = ({ video }) => {
       {video.filter((item, id) => (
         id < 3
       )).map((videoItem, id) => {
-        // console.log(videoItem.video.thumbnails[0].url);
         return (
           <Card key={id} variant="outlined" sx={{ width: 320, mt: 5, mx: 2 }}>
             <CardOverflow>

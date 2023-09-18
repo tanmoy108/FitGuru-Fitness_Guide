@@ -3,7 +3,7 @@ import axios from "axios";
 export const exerciseOption = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '1e1ee9da79msh89b67c58c0bb738p1931f6jsn384ad3bb0b59',
+        'X-RapidAPI-Key': '2bdec45b41mshd5e74bd72dd7b53p1aa718jsncaaf16804838',
         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     }
 };
@@ -18,7 +18,6 @@ export const youtubeOption = {
 export const response = async (url, option) => {
     const res = await axios.request(url, option);
     const data = res.data;
-    // console.log(data);
     return data;
 } 
 

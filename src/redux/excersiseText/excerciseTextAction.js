@@ -6,20 +6,3 @@ export const exerciseText = (text) =>{
         payload : text
     }
 }
-
-
-// export const exerciseName = () =>{
-
-// }
-
-// export const exerciseBodyPart = () =>{
-
-// }
-
-// export const exerciseTarget = () =>{
-
-// }
-
-// export const exerciseEquipment = () =>{
-
-// }

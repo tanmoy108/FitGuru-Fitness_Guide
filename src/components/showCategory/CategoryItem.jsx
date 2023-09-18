@@ -3,7 +3,6 @@ import FitnessCenterRoundedIcon from '@mui/icons-material/FitnessCenterRounded';
 
 const CategoryItem = (props) => {
     const {item,HandleCategory} = props;
-    // console.log(item);
   return (
     <>
     <div className="categoryBox" onClick={()=>HandleCategory(item)} >
